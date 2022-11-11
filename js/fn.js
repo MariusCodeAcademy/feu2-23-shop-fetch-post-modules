@@ -21,6 +21,11 @@ function getSingleProduct(id) {
   return getData(`${BASE_URL}/products/${id}`).then((item) => item);
 }
 
+// https://dummyjson.com/products/categories
+function getProdCategories() {
+  return getData(`${BASE_URL}/products/categories`).then((categoriesArr) => categoriesArr);
+}
+
 // getSingleProduct(5);
 // getProducts().then(products);
 

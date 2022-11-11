@@ -9,12 +9,29 @@
   <link rel="stylesheet" href="./style/style.css" />
   <!-- itraukiu javascript -->
   <script src="./js/fn.js" defer></script>
+  <script src="./js/Shop.js" defer></script>
   <script src="./js/main.js" defer></script>
 </head>
 
 <body>
   <div class="container">
     <h1>E Shop</h1>
+
+    <fieldset>
+      <form class="flex flex-col max-w-300">
+        <input type="text" id="title" placeholder="Title" value="">
+        <input type="number" id="price" placeholder="price" value="">
+        <input type="text" id="thumbnail" placeholder="Image Url" value="">
+        <textarea name="description" id="description" placeholder="description"></textarea>
+        <div>
+          <label for="category">Kategorija</label>
+          <select name="category" id="category">
+            <option selected disabled>Pasirinkite kategorija</option>
+          </select>
+        </div>
+        <button type="submit" class="">Create</button>
+      </form>
+    </fieldset>
 
     <div id="products" class="products">
       <div class="shop-item card">

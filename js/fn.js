@@ -27,6 +27,9 @@ function getProdCategories() {
 }
 
 // https://dummyjson.com/products/categories/smartphones
+function getProdInCategory(category) {
+  return getData(`${BASE_URL}/products/category/${category}`).then((data) => data.products);
+}
 
 // getSingleProduct(5);
 // getProducts().then(products);

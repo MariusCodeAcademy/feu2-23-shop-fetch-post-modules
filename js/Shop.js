@@ -45,14 +45,19 @@ class Shop {
     return divEl;
   }
 
-  filterCategory(event) {
+  async filterCategory(event) {
     const filterValue = event.target.value;
     console.log('filterValue ===', filterValue);
     // 4.1. padaryti kad pasirinkus kategorija parsiustume ir rodytume tik tos kategorijos produktus.(tam reiktu nebenaudoti db.json o siustis is https://dummyjson.com/products/category/smartphones kur smartphones yra kategorija)
+    this.items = await getProdInCategory(filterValue);
+    console.log('this.items ===', this.items);
+    console.log('this ===', this);
+    this.renderList();
   }
 
   renderList() {
     this.el.list.innerHTML = '';
+    console.log('this.items ===', this.items);
     this.items
       .map((iObj) => this.makeOneItem(iObj))
       .forEach((htmlEl) => this.el.list.append(htmlEl));

@@ -37,7 +37,7 @@ class Shop {
         <p>Category: ${itemObj.category}</p>
         <div class="control">
           <button>Add to cart</button>
-          <a href="#">more info ></a>
+          <a href="product.html">more info ></a>
         </div>
     `;
     return divEl;

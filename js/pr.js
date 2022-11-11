@@ -1,6 +1,9 @@
 'use strict';
 console.log('pr.js');
 
+const productEl = document.getElementById('item');
+const titleEl = document.querySelector('h1');
+
 // suzinoti koks dabartinio produkto id
 // Create urlParams query string
 console.log('window.location.search ===', window.location.search);
@@ -15,7 +18,9 @@ console.log(procutId);
 // parsiusti ta produka
 getSingleProduct(procutId).then((productObj) => {
   console.log('productObj ===', productObj);
-  renderHTML(productObj);
+  titleEl.textContent = productObj.title;
+  // sugeneruoti jo html arba supildyti html
+  const htmlProductEl = makeOneSingleItem(productObj);
+  // patalpinti DOM
+  productEl.append(htmlProductEl);
 });
-
-// sugeneruoti jo html arba supildyti html

@@ -23,3 +23,18 @@ function getSingleProduct(id) {
 
 // getSingleProduct(5);
 // getProducts().then(products);
+
+function makeOneSingleItem(itemObj) {
+  const divEl = document.createElement('div');
+  divEl.className = 'shop-item card';
+  divEl.innerHTML = `
+    <img src="${itemObj.thumbnail}" alt="preke">
+      <p class="price">${itemObj.price} eur</p>
+      <p>Category: ${itemObj.category} (id:${itemObj.id})</p>
+      <div class="control">
+        <button>Add to cart</button>
+        <a href="index.html">Go back ></a>
+      </div>
+  `;
+  return divEl;
+}

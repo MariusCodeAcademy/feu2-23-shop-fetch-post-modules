@@ -45,6 +45,11 @@ class MyForm {
     // gauti kategorijas is https://dummyjson.com/products/categories
     // irasyti i this.categoriesArrFetch
   }
+
+  makeAndAddCategoriesOptions() {
+    // panaudoti kategoriju masyva this.categoriesArrFetch pagalminti pasirinkimus selectui
+    // sugeneruoti pasirinkimus selektui.
+  }
 }
 
 const form1 = new MyForm();

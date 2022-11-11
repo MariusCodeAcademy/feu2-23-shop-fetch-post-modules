@@ -18,7 +18,18 @@ class MyForm {
       // iskonsoliti kazka
       console.log('js control form');
       // surinkti visus inputus i javaskriptini objekta
+      console.log('this.formEl.elements ===', this.formEl.elements);
+      // constantos formos elementams
+      const { title, price, thumbnail, description, category } = this.formEl.elements;
+      const newProductObj = {
+        title: title.value.trim(),
+        price: price.value.trim(),
+        thumbnail: thumbnail.value.trim(),
+        description: description.value.trim(),
+        category: category.value.trim(),
+      };
       // ispausdinti objeka
+      console.log('newProductObj ===', newProductObj);
     });
   }
 

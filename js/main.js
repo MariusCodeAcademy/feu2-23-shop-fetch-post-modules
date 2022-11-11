@@ -74,7 +74,7 @@ console.log('form1 ===', form1);
 async function initFilter() {
   const filterSelectEl = document.getElementById('filter-category');
 
-  filterSelectEl.addEventListener('change', app.filterCategory);
+  filterSelectEl.addEventListener('change', (event) => app.filterCategory(event));
 
   const catArray = await getProdCategories();
   console.log('catArray ===', catArray);

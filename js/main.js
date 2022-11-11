@@ -12,7 +12,7 @@ class MyForm {
   }
 
   initListener() {
-    this.formEl.addEventListener('submit', (event) => {
+    this.formEl.addEventListener('submit', async (event) => {
       // sutabdyti forma nuo issiuntimo
       event.preventDefault();
       // iskonsoliti kazka
@@ -30,6 +30,9 @@ class MyForm {
       };
       // ispausdinti objeka
       console.log('newProductObj ===', newProductObj);
+      // issiusti objekta i serveri
+      const createdPostFromServer = await sendPost(newProductObj);
+      app.addNewProductToList(createdPostFromServer);
     });
   }
 

@@ -38,8 +38,9 @@ class MyForm {
       const createdPostFromServer = await sendPost(newProductObj);
       if (createdPostFromServer) {
         this.formFieldSetEl.style.display = 'none';
+        // dedam i sarasa objekta tik jei gavom sekminga atsakyma
+        app.addNewProductToList(createdPostFromServer);
       }
-      app.addNewProductToList(createdPostFromServer);
     });
   }
 

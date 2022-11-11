@@ -31,6 +31,8 @@ function makeOneSingleItem(itemObj) {
     <img src="${itemObj.thumbnail}" alt="preke">
       <p class="price">${itemObj.price} eur</p>
       <p>Category: ${itemObj.category} (id:${itemObj.id})</p>
+      <p>Description: ${itemObj.description}</p>
+      <p><i>Stock: ${itemObj.stock}</i></p>
       <div class="control">
         <button>Add to cart</button>
         <a href="index.html">Go back ></a>

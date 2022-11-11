@@ -45,6 +45,12 @@ class Shop {
     return divEl;
   }
 
+  filterCategory(event) {
+    const filterValue = event.target.value;
+    console.log('filterValue ===', filterValue);
+    // 4.1. padaryti kad pasirinkus kategorija parsiustume ir rodytume tik tos kategorijos produktus.(tam reiktu nebenaudoti db.json o siustis is https://dummyjson.com/products/category/smartphones kur smartphones yra kategorija)
+  }
+
   renderList() {
     this.el.list.innerHTML = '';
     this.items

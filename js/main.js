@@ -70,3 +70,20 @@ class MyForm {
 
 const form1 = new MyForm();
 console.log('form1 ===', form1);
+
+async function initFilter() {
+  const filterSelectEl = document.getElementById('filter-category');
+
+  filterSelectEl.addEventListener('change', app.filterCategory);
+
+  const catArray = await getProdCategories();
+  console.log('catArray ===', catArray);
+
+  catArray.forEach((catString) => {
+    const optionEl = document.createElement('option');
+    optionEl.value = catString;
+    optionEl.textContent = catString;
+    filterSelectEl.append(optionEl);
+  });
+}
+initFilter();

@@ -1,6 +1,14 @@
 {
   "products": [
     {
+      "category": "Pasirinkite kategorija",
+      "description": "very nice cat",
+      "price": "500",
+      "thumbnail": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpulpbits.net%2Fwp-content%2Fuploads%2F2014%2F01%2FTabby-Cat-Images.jpg&f=1&nofb=1&ipt=f76b8ebc439b78397fdbd095cd135f8c5c7b0b02bbd7c53e128355e36bf284df&ipo=images",
+      "title": "cat",
+      "id": 101
+    },
+    {
       "id": 1,
       "title": "iPhone 9",
       "description": "An apple mobile which is nothing like apple",

@@ -34,10 +34,10 @@ class Shop {
       <img src="${itemObj.thumbnail}" alt="preke">
         <h3>${itemObj.title}</h3>
         <p class="price">${itemObj.price} eur</p>
-        <p>Category: ${itemObj.category}</p>
+        <p>Category: ${itemObj.category} (id:${itemObj.id})</p>
         <div class="control">
           <button>Add to cart</button>
-          <a href="product.html">more info ></a>
+          <a href="product.html?prId=${itemObj.id}">more info ></a>
         </div>
     `;
     return divEl;

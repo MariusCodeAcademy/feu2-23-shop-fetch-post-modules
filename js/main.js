@@ -7,6 +7,7 @@ console.log('app ===', app);
 class MyForm {
   formEl = document.forms[0];
   categorySelEl = this.formEl.elements.category;
+  formFieldSetEl = document.getElementById('add-form-field');
   categoriesArrFetch = [];
 
   constructor() {
@@ -35,6 +36,9 @@ class MyForm {
       console.log('newProductObj ===', newProductObj);
       // issiusti objekta i serveri
       const createdPostFromServer = await sendPost(newProductObj);
+      if (createdPostFromServer) {
+        this.formFieldSetEl.style.display = 'none';
+      }
       app.addNewProductToList(createdPostFromServer);
     });
   }

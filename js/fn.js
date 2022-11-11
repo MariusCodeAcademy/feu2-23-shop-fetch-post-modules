@@ -26,6 +26,8 @@ function getProdCategories() {
   return getData(`${BASE_URL}/products/categories`).then((categoriesArr) => categoriesArr);
 }
 
+// https://dummyjson.com/products/categories/smartphones
+
 // getSingleProduct(5);
 // getProducts().then(products);
 
